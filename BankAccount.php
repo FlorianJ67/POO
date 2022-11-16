@@ -50,14 +50,12 @@ class BankAccount {
             
     //Virement
            
-    public function Virement(/*$compte1,*//*$compte2,*/$currency){
-        if ($compte1 < $currency) {
+    public function Virement($compte2,$currency){
+        if ($this->_solde < $currency) {
             echo "Montant insuffisant";
         }
-    /*
-        $compte1 -= $currency;
-        $compte2 += $currency;
-    */
+        $this->_solde -= $currency;
+        $compte2->_solde += $currency;
     }
                     
     //Affiche les info d'un compte

@@ -9,9 +9,13 @@
 
 
 $titulaire1 = new Titulaire("John","Chirac","1978-10-04","paris");
-$compte1 = new BankAccount("compte courrant","euro",5, $titulaire1);
-$compte2 = new BankAccount("compte marchant","yen",54512, $titulaire1);
+$compte1 = new BankAccount("compte courrant","euro",500, $titulaire1);
+$compte2 = new BankAccount("compte marchant","yen",54000, $titulaire1);
 
+$titulaire1->getUserInfo();
+
+$compte1->Virement($compte2,89);
+echo '<br>';
 $titulaire1->getUserInfo();
 
 ?>
